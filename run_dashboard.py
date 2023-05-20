@@ -1,8 +1,3 @@
-# -------------------------------------
-# Dash app to explore the results of
-# multi-objective airfoiloptimization
-# by alfiyandyhr
-# -------------------------------------
 from dash import Dash, dcc, html
 import dash
 import pandas as pd
@@ -129,7 +124,7 @@ def update_crossfilter_airfoil_candidates(method):
         
     return [{'label': i, 'value': i} for i in df['Name']]
 
-    @app.callback(
+@app.callback(
     dash.dependencies.Output('crossfilter-indicator-scatter', 'figure'),
     [
      dash.dependencies.Input('crossfilter-airfoil-candidates', 'value'),
